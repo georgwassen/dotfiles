@@ -1,0 +1,21 @@
+[user]
+	name = @GITNAME@
+	email = @GITEMAIL@
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = auto
+
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	lol = log --oneline --graph --decorate
+
+[push]
+	default = simple

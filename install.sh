@@ -21,3 +21,6 @@ echo "Look at ~/.vimrc for instructions to install Vundle"
 echo " * Start vim and execute :VundleInstall"
 echo " * Enter .vim/bundle/YouCompleteMe, RTFM, and execute ./install.sh --clang-completer"
 
+install gitconfig .gitconfig
+install gitk .gitk
+
