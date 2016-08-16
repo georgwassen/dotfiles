@@ -81,7 +81,7 @@ autocmd! bufwritepost .vimrc source %
 "=========================================================================================
 " whitespace
 "-----------------------------------------------------------------------------------------
-set shiftwidth=4  " intent with >> and Ctrl-T by 4 characters
+set shiftwidth=2  " intent with >> and Ctrl-T by 2 characters
 set tabstop=4     " ASCII-9 (^I) will be 4 characters
 set expandtab     " never use TAB-character (^I), replace with spaces (4, see tabstop)
 set nojoinspaces  " don't add two spaces after .!? (only a single one)
@@ -123,16 +123,36 @@ set incsearch     " search as your type
 "-----------------------------------------------------------------------------------------
 set number
 set guifont=DejaVu\ Sans\ Mono\ 9
+" remove print icon (German version: Drucken, see :tmenu ToolBar)
+" http://superuser.com/questions/11289/how-do-i-customize-the-gvim-toolbar
+aunmenu ToolBar.Drucken
 
 set showcmd
 set visualbell    " don't beep on errors or superfluous ESC, but blink
                   " see: http://vim.wikia.com/wiki/Disable_beeping
 
+colorscheme blue
+
+
+" some neat tricks from various sources,
+" eg https://redd.it/368e1d
+set matchpairs+=<:>     " highlight angle brackets like other bracket types
+set scrolloff=5         " scroll when curser is 5 lines from top/bottom
+"set relativenumber  number " show line numbers relative to current line (and number of current line)
+
+function! FindConflict()
+    try
+        /<<<<<<<
+    catch
+    endtry
+endfunction
+nnoremap \ :call FindConflict()<CR>
+
+
 if &term=="xterm"
     set mouse=a
 endif
 
-colorscheme blue
 
 
 "=========================================================================================
