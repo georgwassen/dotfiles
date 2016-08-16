@@ -12,7 +12,9 @@
 "     (install with package manager)
 "     NOTE: Does not work on Raspberry Pi
 "     Build it:   $ YCM_CORES=1 ./install.sh --clang-completer
-
+"
+" After adding Plugins below:
+"  In vim, execute :PluginInstall
 
 "=========================================================================================
 " include Vundle
@@ -56,6 +58,12 @@ Plugin 'chrisbra/csv.vim'
        " csv -- Comfortably edit comma separated value files
        " Help:
        "   :help ft-csv.txt
+Plugin 'metakirby5/codi.vim'
+       " codi -- Interactive scratchpad
+       " Use:
+       "   :Codi [python]
+       " Note:
+       "   This is more interactive, if +channel +job is configured.
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
